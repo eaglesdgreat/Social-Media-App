@@ -7,7 +7,6 @@
     "development": "webpack --mode=development --config webpack.config.client.js && nodemon",
     "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
     "start": "NODE_ENV=production node ./dist/server.generated.js",
-    "parcel": "parcel -p 3060 index.html",
     "lint": "./node_modules/.bin/eslint --init",
     "test": "jest test.js"
   },
