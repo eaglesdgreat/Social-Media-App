@@ -1,0 +1,22 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import Post from './Post'
+
+class PostList extends React.Component {
+    render() {
+        return (
+            <div style={{marginTop: '24px'}}>
+                {this.props.posts.map((item, i) => {
+                    return <Post post={item} key={i} onRemoved={this.props.removeUpdate}/>
+                })}
+            </div>
+        )
+    }
+}
+
+PostList.propTypes = {
+    posts: PropTypes.array.isRequired,
+    removeUpdate: PropTypes.func.isRequired
+}
+
+export default PostList
