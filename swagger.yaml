@@ -1,0 +1,107 @@
+swagger: 2.0
+
+info: 
+  version: 1.0.0
+  title: My first swagger api
+  description: A simple api to learn how to write OpenApi Specification using OAS and swagger
+
+schemes: 
+  -http
+host: localhost:3030
+basePath: /api
+
+consumes: 
+  - application/json
+produces: 
+  - application/json
+
+path: 
+  /users: 
+    get: 
+      summary: Gets users
+      description: Return list containing signup users available.
+      respoense: 
+        200: 
+          description: A list of User 
+          schema: 
+            type: array
+            items:
+              required: 
+                -name
+              properties: 
+                photo: 
+                  data: Buffer
+                  contentType: String
+                name:
+                  type: String
+
+    post:
+      summary: Add User
+      description: Create a new user and add to the database
+      parameters:
+        - name: user
+          in: body
+          required: true
+          description: A new User to be created  
+      schema:
+        type: object
+        items:
+          required:
+            -name
+            -email
+            -password
+          properties:
+            name:
+              type: String
+            email: 
+              type: String
+              unique: Email already exists
+            password:
+              type: String
+      response:
+        204: 
+          description: User created successfully
+        400:
+          description: User couldn't be created
+  
+  /users/{userId}:
+    get:
+      summary: Get a user
+      description: Get the data of a specific user from the database
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: The user's userId for the specific searched user
+          type: ObjectId
+      response:
+        200:
+          description: A user data
+          schema: 
+            type: object
+            items:
+              required:
+                -name
+                -email
+                -created
+                -about
+                -photo
+                -following
+                -followers
+              properties:
+                name: 
+                  type: String
+                email:
+                  type: String
+                created: 
+                  type: Date
+                about: 
+                  type: String
+                photo: 
+                  data: Buffer
+                  contentType: String
+        404:
+          description: User does not exists.
+
+
+definitions:
