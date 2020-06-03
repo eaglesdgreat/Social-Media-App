@@ -1,5 +1,5 @@
 # Social Media App
-This is the code repository for [Social Media App](https://www.packtpub.com/web-development/full-stack-react-projects?utm_source=github&utm_medium=repository&utm_campaign=9781788835534), published on github by [Okponobi Emmanuel](https://github.com/eaglesdgreat). It contains all the app supporting code files necessary to work through the project from start to finish and the final production and deployment app.
+This is the code repository for [Social Media App](https://github.com/eaglesdgreat/Social-Media-App.git), published on github by [Okponobi Emmanuel](https://github.com/eaglesdgreat). It contains all the app supporting code files necessary to work through the project from start to finish and the final production and deployment app.
 
 ## About the Application
 The Social Media App is a great app inspired by existing social media platforms and can render some great and basic feature a socil media app should have. It's still in for more development and expansion of features and at the moment it has features like:
