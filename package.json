@@ -38,7 +38,7 @@
     "formidable": "1.2.2",
     "helmet": "3.22.0",
     "jsonwebtoken": "8.5.1",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "material-ui": "1.0.0-beta.43",
     "material-ui-icons": "1.0.0-beta.36",
     "mocha": "^7.1.2",
