@@ -41,7 +41,7 @@
     "lodash": "4.17.21",
     "material-ui": "1.0.0-beta.43",
     "material-ui-icons": "1.0.0-beta.36",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "mongoose": "5.9.7",
     "prettier": "^2.0.5",
     "prop-types": "15.7.2",
